@@ -14,7 +14,7 @@ TravelBirds ist eine einfache Webanwendung, die es Benutzern ermöglicht, Kommen
 
 1. **Klonen Sie das Repository**:
    ```sh
-   git clone https://github.com/IhrBenutzername/TravelBirds.git
+   git clone https://github.com/Selvii61/TravelBirds.git
    cd TravelBirds
 2. **Installieren Sie die Abhängigkeiten**:
     ```sh
