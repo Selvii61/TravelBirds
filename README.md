@@ -1,6 +1,6 @@
 # TravelBirds
 
-TravelBirds ist eine einfache Webanwendung, die es Benutzern ermöglicht, Reiseblogs zu lesen und Kommentare zu hinterlassen. Die Anwendung verwendet Node.js, Express und Tailwind CSS.
+TravelBirds ist eine einfache Webanwendung, die es Benutzern ermöglicht, Kommentare zu einem Reiseziel zu hinterlassen. Die Anwendung verwendet Node.js, Express und Tailwind CSS.
 
 ## Inhaltsverzeichnis
 
@@ -47,5 +47,5 @@ TravelBirds ist eine einfache Webanwendung, die es Benutzern ermöglicht, Reiseb
 - **Tailwind CSS**: Ein CSS-Framework für benutzerdefinierte Designs.
 
 ## Autoren
-- Sarah Burger ()
+- Sarah Burger (11840301)
 - Selvinur Albayrak (16040821)
