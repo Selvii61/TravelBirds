@@ -1,71 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
+  </head>
+  <body class="bg-gray-100">
     <header>
-        <nav class="bg-blue-500 p-4">
-            <div class="container mx-auto flex justify-between items-center">
-              <a href="#" class="text-white text-2xl font-bold">TravelBirds</a>
-              <div class="space-x-4">
-                <a href="/" class="text-white hover:text-gray-200 nav-link">Home</a>
-                <a href="travelblog" class="text-white hover:text-gray-200 nav-link">Travelblog</a>
-                <a href="comments" class="text-white hover:text-gray-200 nav-link">Comments</a>
-                <a href="about" class="text-white hover:text-gray-200 nav-link">About</a>
-              </div>
-            </div>
-          </nav>
+      <nav class="bg-blue-500 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <a href="#" class="text-white text-2xl font-bold">TravelBirds</a>
+          <div class="space-x-4">
+            <a href="/" class="text-white hover:text-gray-200 nav-link">Home</a>
+            <a href="travelblog" class="text-white hover:text-gray-200 nav-link"
+              >Travelblog</a
+            >
+            <a href="comments" class="text-white hover:text-gray-200 nav-link"
+              >Comments</a
+            >
+            <a href="about" class="text-white hover:text-gray-200 nav-link"
+              >About</a
+            >
+          </div>
+        </div>
+      </nav>
     </header>
-    <br>
-    
-<div class="flex justify-center m-4"> 
-<img src="https://cdn.pixabay.com/photo/2022/06/22/16/10/cathedral-7278228_1280.jpg" alt="Travel blog image" class="w-72 h-auto">
-</div>  
+    <br />
 
+    <div class="flex justify-center m-4">
+      <img
+        src="https://cdn.pixabay.com/photo/2022/06/22/16/10/cathedral-7278228_1280.jpg"
+        alt="Travel blog image"
+        class="w-72 h-auto"
+      />
+    </div>
 
-<h2 class="flex items-center justify-center italic font-bold">Leave us a comment about your trip to spain</h2>
-<br> <br>
-<div class= "flex items-center justify-center">
-<form id="commentForm" action="/travelblog" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
-    <br> <br>
-    <label for="comment">Comment:</label>
-    <textarea id="comment" name="comment"></textarea>
-    <br> <br>
-    <button class="border border-blue-500 font-bold py-2 px-4 rounded hover:bg bg-blue-500 hover:text-white" type="submit">Submit</button>
-    <a href="comments" class="border border-blue-500 font-bold py-2 px-4 rounded hover:bg bg-blue-500 hover:text-white">View comments</a>
-</form>
-</div>
+    <h2 class="flex items-center justify-center italic font-bold">
+      Leave us a comment about your trip to spain
+    </h2>
+    <br />
+    <br />
+    <div class="flex items-center justify-center">
+      <form id="commentForm" action="/travelblog" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" />
+        <br />
+        <br />
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment"></textarea>
+        <br />
+        <br />
+        <button
+          class="border border-blue-500 font-bold py-2 px-4 rounded hover:bg bg-blue-500 hover:text-white"
+          type="submit"
+        >
+          Submit
+        </button>
+        <a
+          href="comments"
+          class="border border-blue-500 font-bold py-2 px-4 rounded hover:bg bg-blue-500 hover:text-white"
+          >View comments</a
+        >
+      </form>
+    </div>
 
-<br>
+    <br />
 
-<script>
-    document.getElementById('commentForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const name = document.getElementById('name').value;
-        const comment = document.getElementById('comment').value;
+    <script>
+      document
+        .getElementById("commentForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("name").value;
+          const comment = document.getElementById("comment").value;
 
-        fetch('/travelblog', {
-            method: 'POST',
+          fetch("/travelblog", {
+            method: "POST",
             headers: {
-                'Content-Type': 'application/json'
+              "Content-Type": "application/json",
             },
-            body: JSON.stringify({ name: name, comment: comment })
-        })
-        .then(response => response.text())
-        .then(data => {
-            alert(data);
-            document.getElementById('name').value = '';
-            document.getElementById('comment').value = '';
-        })
-        .catch(error => console.error('Error:', error));
-    });
-</script>
-
-</body>
+            body: JSON.stringify({ name: name, comment: comment }),
+          })
+            .then((response) => response.text())
+            .then((data) => {
+              alert(data);
+              document.getElementById("name").value = "";
+              document.getElementById("comment").value = "";
+            })
+            .catch((error) => console.error("Error:", error));
+        });
+    </script>
+  </body>
 </html>
